@@ -1,9 +1,13 @@
 <section class="admin-show">
+
   <header class="page-header">
     <h1>Admin Dashboard</h1>
   </header>
 
   <div class="jumbotron">
+
+    <h2>Summary</h2>
+
     <article class="well">
       <h3>Products: <%= @product_count %></h3>
       <p>See all <%= link_to 'products', admin_products_path %>.</p>
@@ -13,5 +17,7 @@
       <h3>Categories: <%= @category_count %></h3>
       <p>See all <%= link_to 'categories', admin_categories_path %>.</p>
     </article>
+
   </div>
+
 </section>
