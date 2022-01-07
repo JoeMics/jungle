@@ -20,6 +20,19 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
 
+  # Consider making these routes RESTful?
+  # Routes for user sign up
+  # TODO: find better fix for this bug
+  # /users to users#new so showing error on form does not break app
+  get '/signup', to: 'users#new'
+  get '/users', to: 'users#new'
+  post '/users', to: 'users#create'
+
+  # Routes for user login, and logout
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

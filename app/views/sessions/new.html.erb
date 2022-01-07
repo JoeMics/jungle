@@ -1,0 +1,32 @@
+<section class="login-form">
+
+  <header class="page-header">
+    <h1>Log In</h1>
+  </header>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <%# TODO: client-side validation using jQuery %>
+      <%# form_tag for resources without a model %>
+      <%= form_tag '/login' do %>
+
+        <div class="form-group">
+          <%= label_tag :email %>
+          <%= text_field_tag :email, '', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag :password %>
+          <%= password_field_tag :password, '', class: 'form-control' %>
+        </div>
+
+        <%= submit_tag "Submit", class: 'btn btn-primary' %>
+      <% end %>
+
+      <br>
+
+      <h4>Don't have an account? <%= link_to 'Create an account', :signup %></h4>
+    </div>
+  </div>
+
+</section>
