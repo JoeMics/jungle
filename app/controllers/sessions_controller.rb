@@ -9,11 +9,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       # save user id as cookie in browser
       session[:user_id] = user.id
-      puts 'LOGGED IN!'
       redirect_to [:root]
     else 
-      puts 'FAILED LOGIN'
-      redirect_to [:login]
+      render :new
     end
   end
 

@@ -1,10 +1,28 @@
-<h1>Login</h1>
+<section class="login-form">
 
-<%# form_tag for resources without a model %>
-<%= form_tag '/login' do %>
+  <header class="page-header">
+    <h1>Login</h1>
+  </header>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <%# TODO: client-side validation using jQuery %>
+      <%# form_tag for resources without a model %>
+      <%= form_tag '/login' do %>
 
-<% end %>
+        <div class="form-group">
+          <%= label_tag :name %>
+          <%= text_field_tag :email, '', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag :password %>
+          <%= password_field_tag :password, '', class: 'form-control' %>
+        </div>
+
+        <%= submit_tag "Submit", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+
+</section>
