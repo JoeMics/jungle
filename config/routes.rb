@@ -20,8 +20,12 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
 
+  # Consider making these routes RESTful?
   # Routes for user sign up
-  get 'signup', to: 'users#new'
+  # TODO: find better fix for this bug
+  # /users to users#new so showing error on form does not break app
+  get '/signup', to: 'users#new'
+  get '/users', to: 'users#new'
   post '/users', to: 'users#create'
 
   # Routes for user login, and logout
