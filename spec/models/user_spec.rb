@@ -109,6 +109,16 @@ RSpec.describe User, type: :model do
       expect(@authenticated.id).to eq(@user_id)
     end
 
+    it 'should return the instance of the user if authenticated (with whitespace)' do
+      @authenticated = User.authenticate_with_credentials(" #{@email} ", @password)
+      expect(@authenticated.id).to eq(@user_id)
+    end
+
+    it 'should return the instance of the user if authenticated (case insensitive)' do
+      @authenticated = User.authenticate_with_credentials(@email.upcase, @password)
+      expect(@authenticated.id).to eq(@user_id)
+    end
+
     it 'should return the nil if not authenticated' do
       @authenticated = User.authenticate_with_credentials('not', 'real')
       expect(@authenticated).to be_nil
