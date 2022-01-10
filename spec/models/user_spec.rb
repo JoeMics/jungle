@@ -7,8 +7,8 @@ RSpec.describe User, type: :model do
         first_name: 'Joseph',
         last_name: 'Joestar',
         email: 'jojo@jomail.com',
-        password: 'Dio',
-        password_confirmation: 'Dio'
+        password: 'joestarsecrettechnique',
+        password_confirmation: 'joestarsecrettechnique'
       }
     }
 
@@ -69,13 +69,24 @@ RSpec.describe User, type: :model do
     end
 
     it 'should not save successfully when password confirmation does not match' do
-      @user_params[:password_confirmation] = 'DIO BRANDO'
+      @user_params[:password_confirmation] = 'diosecrettechnique'
       @user = User.new(@user_params)
       @user.save
   
       expect(@user.id).to_not be_present
       expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
     end
-  end
+
+    it 'should not save successfully when password is not at least 10 characters long' do
+      @user_params[:password] = 'LisaLisa'
+      @user_params[:password_confirmation] = 'LisaLisa'
+      @user = User.new(@user_params)
+      @user.save
   
+      expect(@user.id).to_not be_present
+      # expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+    end
+    
+
+  end
 end
