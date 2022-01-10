@@ -84,7 +84,7 @@ RSpec.describe User, type: :model do
       @user.save
   
       expect(@user.id).to_not be_present
-      # expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+      expect(@user.errors.full_messages).to include("Password is too short (minimum is 10 characters)")
     end
     
 
