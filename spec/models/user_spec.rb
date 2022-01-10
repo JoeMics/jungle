@@ -111,7 +111,7 @@ RSpec.describe User, type: :model do
 
     it 'should return the nil if not authenticated' do
       @authenticated = User.authenticate_with_credentials('not', 'real')
-      expect(@authenticated.id).to be_nil
+      expect(@authenticated).to be_nil
     end
   end
 end
