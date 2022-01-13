@@ -6,6 +6,7 @@
 - [Features](#features)
   - [Admins](#admins)
   - [Users](#users)
+- [Screenshots](#screenshots)
 - [Setup](#setup)
   - [Apple M1 setup](#apple-m1-setup)
   - [Project Setup](#project-setup)
@@ -18,17 +19,21 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Ruby
 
 ## About
 
-Jungle simulates the inheritance of an older project. Developers are not always able to use the latest and greatest tools, since it would break applications, or make them unreliable. This project emphasizes the need for strong problem solving skills. 
+Jungle simulates the inheritance of an older project. Developers are not always able to use the latest and greatest tools, since it would break applications, or make them unreliable. This poject emphasizes the need for strong problem solving skills. 
 
 The tasks for this project involved adding in new features such as user authentication, category creation, a "sold out" badge, an order detail page, an admin dashboard, and multiple bug fixes from the original repository. Tests were also added to these new features, as well as existing ones.
 
 ## Features
+![Home Page](./docs/images/home_page.png)
+![My Cart](./docs/images/my_cart.png)
+![Stripe Checkout](./docs/images/stripe_checkout.png)
+![Order Details Page](./docs/images/order_details.png)
 
-### - Admins:
+- ### Admins:
   - Create Products with titles, images, descriptions, price etc.
   - Delete Products
   - Create categories for products
-### - Users:
+- ### Users:
   - Purchase products if in stock
   - Add items to a cart
   - Make transactions using Stripe
