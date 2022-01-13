@@ -24,11 +24,6 @@ Jungle simulates the inheritance of an older project. Developers are not always 
 The tasks for this project involved adding in new features such as user authentication, category creation, a "sold out" badge, an order detail page, an admin dashboard, and multiple bug fixes from the original repository. Tests were also added to these new features, as well as existing ones.
 
 ## Features
-![Home Page](./docs/images/home_page.png)
-![My Cart](./docs/images/my_cart.png)
-![Stripe Checkout](./docs/images/stripe_checkout.png)
-![Order Details Page](./docs/images/order_details.png)
-
 - ### Admins:
   - Create Products with titles, images, descriptions, price etc.
   - Delete Products
@@ -42,6 +37,10 @@ The tasks for this project involved adding in new features such as user authenti
   - Create or log into an account
 
 ## Screenshots
+![Home Page](./docs/images/home_page.png)
+![My Cart](./docs/images/my_cart.png)
+![Stripe Checkout](./docs/images/stripe_checkout.png)
+![Order Details Page](./docs/images/order_details.png)
 
 ## Setup
 
